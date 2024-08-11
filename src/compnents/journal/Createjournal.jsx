@@ -23,7 +23,7 @@ const CreateJournal = () => {
     }
 
     try {
-      const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com/${user}`, {
+      const response = await fetch(`backend-healthmate-khusburai.onrender.com/${user}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user}`

@@ -14,7 +14,7 @@ const Readjournal = () => {
     useEffect(() => {
         const fetchJournals = async () => {
             try {
-                const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com/${username}/journals`);
+                const response = await axios.get(`backend-healthmate-khusburai.onrender.com/${username}/journals`);
                 setJournals(response.data);
             } catch (error) {
                 console.error('Error fetching journals:', error);
@@ -39,7 +39,7 @@ const Readjournal = () => {
 
     const confirmDelete = async () => {
         try {
-            await axios.delete(`http://https://backend-healthmate-khusburai.onrender.com/journal-delete/${username}/${journalToDelete}`);
+            await axios.delete(`backend-healthmate-khusburai.onrender.com/journal-delete/${username}/${journalToDelete}`);
             // Remove the deleted journal from the state
             setJournals(journals.filter(journal => journal._id !== journalToDelete));
             // Close the confirmation modal
@@ -64,7 +64,7 @@ const Readjournal = () => {
                 </div>
                 <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                     {journals.map((journal) => {
-                        const coverImage = journal.coverPicture ? `http://https://backend-healthmate-khusburai.onrender.com/${journal.coverPicture}` : defaultCoverImage;
+                        const coverImage = journal.coverPicture ? `backend-healthmate-khusburai.onrender.com/${journal.coverPicture}` : defaultCoverImage;
 
                         return (
                             <div key={journal._id} className="bg-white shadow-md rounded-lg overflow-hidden relative">
