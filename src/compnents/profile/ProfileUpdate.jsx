@@ -18,7 +18,7 @@
 //     useEffect(() => {
 //         const fetchUserDetails = async () => {
 //             try {
-//                 const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com//${username}/getuserdetails`);
+//                 const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com/${username}/getuserdetails`);
 //                 if (response.status === 200) {
 //                     const data = await response.json();
 //                     const { name, email, gender, age, bio, profilePicture } = data;
@@ -86,7 +86,7 @@
 //                 formData.append('profilePicture', profilePicture);
 //             }
     
-//             const response = await axios.patch(`http://https://backend-healthmate-khusburai.onrender.com//${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
+//             const response = await axios.patch(`http://https://backend-healthmate-khusburai.onrender.com/${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
 //             console.log(response);
 //             if (response.status === 200) {
 //                 navigate(`/${username}/profile`);
@@ -265,7 +265,7 @@ const ProfileUpdate = () => {
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com//${username}/getuserdetails`);
+                const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com/${username}/getuserdetails`);
                 if (response.status === 200) {
                     const data = await response.json();
                     const { name, email, gender, age, bio, profilePicture } = data;
@@ -333,7 +333,7 @@ const ProfileUpdate = () => {
                 formData.append('profilePicture', profilePicture);
             }
 
-            const response = await axios.patch(`http://https://backend-healthmate-khusburai.onrender.com//${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
+            const response = await axios.patch(`http://https://backend-healthmate-khusburai.onrender.com/${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
             console.log(response);
             if (response.status === 200) {
                 navigate(`/${username}/profile`);

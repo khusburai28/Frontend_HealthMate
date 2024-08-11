@@ -19,7 +19,7 @@ const AnonymousPost = () => {
     };
 
     try {
-      const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com//createAnonymousPosts', {
+      const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com/createAnonymousPosts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

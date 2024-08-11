@@ -51,7 +51,7 @@
 //                 formDataWithFile.append('profilePicture', profilePicture);
 //             }
 
-//             const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com//signup', {
+//             const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com/signup', {
 //                 method: 'POST',
 //                 body: formDataWithFile,
 //             });
@@ -355,7 +355,7 @@ export default function Signup() {
                 formDataWithFile.append('profilePicture', profilePicture);
             }
 
-            const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com//signup', {
+            const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com/signup', {
                 method: 'POST',
                 body: formDataWithFile,
             });

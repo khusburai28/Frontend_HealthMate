@@ -15,7 +15,7 @@
 //     useEffect(() => {
 //         const fetchJournal = async () => {
 //             try {
-//                 const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com//${username}/${id}`);
+//                 const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com/${username}/${id}`);
 //                 if (response.status === 200) {
 //                     const { title, article, tags, coverPicture } = response.data;
 //                     setTitle(title);
@@ -75,7 +75,7 @@
 // }
 
 // // Send the request with the plain JavaScript object
-// const response = await axios.put(`http://https://backend-healthmate-khusburai.onrender.com//journals/${username}/${id}`, formDataObject);
+// const response = await axios.put(`http://https://backend-healthmate-khusburai.onrender.com/journals/${username}/${id}`, formDataObject);
     
 //             if (response.status !== 200) {
 //                 throw new Error('Network response was not ok');
@@ -210,7 +210,7 @@ const UpdateJournal = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com//${username}/${id}`);
+                const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com/${username}/${id}`);
                 if (response.status === 200) {
                     const { title, article, tags, coverPicture } = response.data;
                     setTitle(title);
@@ -260,7 +260,7 @@ const UpdateJournal = () => {
                 formDataObject[key] = value;
             }
 
-            const response = await axios.put(`http://https://backend-healthmate-khusburai.onrender.com//journals/${username}/${id}`, formDataObject);
+            const response = await axios.put(`http://https://backend-healthmate-khusburai.onrender.com/journals/${username}/${id}`, formDataObject);
     
             if (response.status !== 200) {
                 throw new Error('Network response was not ok');
