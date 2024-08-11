@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import defaultCoverImage from './download.jpg'; // Make sure this path is correct relative to your file structure
 
 const JournalDetail = () => {
@@ -11,7 +11,7 @@ const JournalDetail = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/${username}/${id}`);
+                const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com//${username}/${id}`);
                 setJournal(response.data);
             } catch (error) {
                 setError('Error fetching journal details');
@@ -28,7 +28,7 @@ const JournalDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const coverImage = journal.coverPicture ? `http://localhost:8000/${journal.coverPicture}` : defaultCoverImage;
+    const coverImage = journal.coverPicture ? `http://https://backend-healthmate-khusburai.onrender.com//${journal.coverPicture}` : defaultCoverImage;
 
     return (
         <div className="bg-white py-16 sm:py-24">

@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchAnonymousPosts = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:8000/anonymousPosts');
+//         const response = await axios.get('http://https://backend-healthmate-khusburai.onrender.com//anonymousPosts');
 //         setAnonymousPosts(response.data);
 //       } catch (error) {
 //         console.error('Error fetching anonymous posts:', error);
@@ -60,9 +60,9 @@
 // export default AllAnonymousPost;
 
 
-import React, { useState, useEffect } from 'react';
-import Navbar from '../navbar/Navbar';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Navbar from '../navbar/Navbar';
 
 const AllAnonymousPost = () => {
   const [anonymousPosts, setAnonymousPosts] = useState([]);
@@ -70,7 +70,7 @@ const AllAnonymousPost = () => {
   useEffect(() => {
     const fetchAnonymousPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/anonymousPosts');
+        const response = await axios.get('http://https://backend-healthmate-khusburai.onrender.com//anonymousPosts');
         setAnonymousPosts(response.data);
       } catch (error) {
         console.error('Error fetching anonymous posts:', error);

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Loader from "react-js-loader";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -46,7 +45,7 @@ const Navbar = () => {
   const confirmDelete = async () => {
     try {
       // Call the backend route to delete the user
-      await fetch(`http://localhost:8000/delete-user/${user}`, {
+      await fetch(`http://https://backend-healthmate-khusburai.onrender.com//delete-user/${user}`, {
         method: 'DELETE',
       });
       // Perform logout after deletion

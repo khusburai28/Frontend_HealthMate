@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../navbar/Navbar';
 
 const CreateJournal = () => {
   const [title, setTitle] = useState('');
@@ -23,7 +23,7 @@ const CreateJournal = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/${user}`, {
+      const response = await fetch(`http://https://backend-healthmate-khusburai.onrender.com//${user}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user}`

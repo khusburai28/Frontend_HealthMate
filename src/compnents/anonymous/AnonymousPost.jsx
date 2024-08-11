@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../navbar/Navbar';
 
 const AnonymousPost = () => {
   const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const AnonymousPost = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/createAnonymousPosts', {
+      const response = await fetch('http://https://backend-healthmate-khusburai.onrender.com//createAnonymousPosts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

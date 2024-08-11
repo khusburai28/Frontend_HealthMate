@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Dialog, Transition } from '@headlessui/react';
+import axios from 'axios';
+import { BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Tooltip } from 'chart.js';
+import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 import Navbar from '../navbar/Navbar';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
@@ -18,7 +18,7 @@ const MoodTrack = () => {
 
   useEffect(() => {
     // Fetch existing mood data for the user
-    axios.get(`http://localhost:8000/api/moods/${username}`)
+    axios.get(`http://https://backend-healthmate-khusburai.onrender.com//api/moods/${username}`)
       .then(response => setMoodData(response.data))
       .catch(error => console.error('Error fetching mood data:', error));
   }, [username]);
@@ -30,7 +30,7 @@ const MoodTrack = () => {
 
   const handleMoodSelect = (selectedMood) => {
     setMood(selectedMood);
-    axios.post(`http://localhost:8000/api/moods/${username}`, { date: selectedDate, mood: selectedMood })
+    axios.post(`http://https://backend-healthmate-khusburai.onrender.com//api/moods/${username}`, { date: selectedDate, mood: selectedMood })
       .then(response => {
         setMoodData(prevData => [...prevData, response.data]);
         setIsModalOpen(false);

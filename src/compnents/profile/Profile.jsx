@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../navbar/Navbar';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Navbar from '../navbar/Navbar';
 
 import Loader from "react-js-loader";
-import { Audio } from 'react-loader-spinner';
 import Readjournal from '../journal/Readjournal';
 import defaultProfilePicture from './download2.jpg';
 
@@ -18,7 +17,7 @@ const Profile = () => {
     // Function to fetch user details
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/${username}/getuserdetails`);
+        const response = await axios.get(`http://https://backend-healthmate-khusburai.onrender.com//${username}/getuserdetails`);
         // Set user details in state
         console.log(response);
         setUserDetails(response.data);
@@ -79,7 +78,7 @@ const Profile = () => {
                     <div className="relative">
                       <img
                         alt="Profile"
-                        src={userDetails.profilePicture ? `http://localhost:8000/${userDetails.profilePicture}` : defaultProfilePicture}
+                        src={userDetails.profilePicture ? `http://https://backend-healthmate-khusburai.onrender.com//${userDetails.profilePicture}` : defaultProfilePicture}
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-24 max-w-[180px]"
                       />
                     </div>
