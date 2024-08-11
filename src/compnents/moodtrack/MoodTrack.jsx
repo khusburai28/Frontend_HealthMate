@@ -18,7 +18,7 @@ const MoodTrack = () => {
 
   useEffect(() => {
     // Fetch existing mood data for the user
-    axios.get(`backend-healthmate-khusburai.onrender.com/api/moods/${username}`)
+    axios.get(`/api/moods/${username}`)
       .then(response => setMoodData(response.data))
       .catch(error => console.error('Error fetching mood data:', error));
   }, [username]);
@@ -30,7 +30,7 @@ const MoodTrack = () => {
 
   const handleMoodSelect = (selectedMood) => {
     setMood(selectedMood);
-    axios.post(`backend-healthmate-khusburai.onrender.com/api/moods/${username}`, { date: selectedDate, mood: selectedMood })
+    axios.post(`/api/moods/${username}`, { date: selectedDate, mood: selectedMood })
       .then(response => {
         setMoodData(prevData => [...prevData, response.data]);
         setIsModalOpen(false);

@@ -11,7 +11,7 @@ const JournalDetail = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`backend-healthmate-khusburai.onrender.com/${username}/${id}`);
+                const response = await axios.get(`/${username}/${id}`);
                 setJournal(response.data);
             } catch (error) {
                 setError('Error fetching journal details');
@@ -28,7 +28,7 @@ const JournalDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const coverImage = journal.coverPicture ? `backend-healthmate-khusburai.onrender.com/${journal.coverPicture}` : defaultCoverImage;
+    const coverImage = journal.coverPicture ? `/${journal.coverPicture}` : defaultCoverImage;
 
     return (
         <div className="bg-white py-16 sm:py-24">

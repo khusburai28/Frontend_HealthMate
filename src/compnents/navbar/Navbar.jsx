@@ -45,7 +45,7 @@ const Navbar = () => {
   const confirmDelete = async () => {
     try {
       // Call the backend route to delete the user
-      await fetch(`backend-healthmate-khusburai.onrender.com/delete-user/${user}`, {
+      await fetch(`/delete-user/${user}`, {
         method: 'DELETE',
       });
       // Perform logout after deletion

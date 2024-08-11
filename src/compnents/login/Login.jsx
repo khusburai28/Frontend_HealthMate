@@ -11,7 +11,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('backend-healthmate-khusburai.onrender.com/login', { username, password });
+//       const response = await axios.post('/login', { username, password });
 //       console.log(response);
 //       localStorage.setItem('token', response.data.token);
 //       localStorage.setItem('tokenUser', response.data.user.username);
@@ -137,7 +137,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('backend-healthmate-khusburai.onrender.com/login', { username, password });
+//       const response = await axios.post('/login', { username, password });
 //       console.log(response);
 //       localStorage.setItem('token', response.data.token);
 //       localStorage.setItem('tokenUser', response.data.user.username);
@@ -269,7 +269,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('backend-healthmate-khusburai.onrender.com/login', { username, password });
+      const response = await axios.post('/login', { username, password });
       console.log(response);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('tokenUser', response.data.user.username);
