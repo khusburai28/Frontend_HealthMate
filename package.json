@@ -44,7 +44,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://backend-healthmate-khusburai.onrender.comn",
+  "proxy": "https://backend-healthmate-khusburai.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
